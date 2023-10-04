@@ -1,0 +1,380 @@
+/* Tampilan default */
+body {
+  background-color: #333333;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #222222;
+}
+
+h1 {
+  margin: 0;
+  color: #ffffff;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer {
+  background-color: #222222;
+  padding: 20px;
+  text-align: center;
+}
+
+main#Home {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.left-section {
+  flex: 1;
+  padding: 20px;
+  text-align: right;
+}
+
+.left-section h2,
+.left-section p {
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.right-section {
+  flex: 1;
+  padding: 20px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.right-section img {
+  width: 100%;
+  height: auto;
+}
+
+.right-section h2,
+.right-section p {
+  margin-top: 0;
+  padding: 20px;
+}
+
+/* Animasi Foto Profil  */
+.right-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.right-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.right-section:hover::before {
+  opacity: 1;
+}
+
+.right-section img {
+  transition: transform 0.3s ease;
+}
+
+.right-section:hover img {
+  transform: scale(1.1);
+}
+
+
+/* Tampilan About Me */
+main#AboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #dddddd;
+  color: #333333;
+}
+
+main#AboutMe h2 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+main#AboutMe article {
+  margin-top: 20px;
+  max-width: 900px;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+main#AboutMe article p {
+  font-size: 55px;
+  line-height: 1.5;
+}
+
+/* Tampilan Responsif */
+@media only screen and (max-width: 768px) {
+  main#Home {
+    flex-direction: column;
+  }
+
+
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .left-section h2,
+  .left-section p {
+    font-size: 40px;
+    line-height: 1.2;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+  main#Home .right-section {
+    margin-top: 20px;
+  }
+
+  main#Home .right-section img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Tampilan Projects */
+main#Projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+main#Projects .section-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+main#Projects .project-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+main#Projects .project-card {
+  width: 400px;
+  background-color: #2c2929;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main#Projects .project-card:hover {
+  transform: translateY(-5px);
+}
+
+main#Projects .project-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 6px;
+}
+
+main#Projects .project-info {
+  text-align: center;
+}
+
+main#Projects .project-info h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+main#Projects .project-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main#Projects .view-button1 {
+  display: block;
+  width: 150px;
+  padding: 10px 0;
+  margin-top: 20px;
+  background-color: #666564;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+main#Projects .view-button2 {
+  display: block;
+  width: 150px;
+  padding: 10px 0;
+  margin-top: 20px;
+  background-color: #666564;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+main#Projects .view-button:hover {
+  background-color: #666564;
+}
+
+.project-info-box1 {
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
+.project-info-box2 {
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
+
+.close-button1, .close-button2 {
+  display: inline-block;
+  padding: 6px 10px;
+  margin-top: 10px;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-button1:hover, .close-button2:hover {
+  background-color: #dddddd;
+}
+
+/* Tampilan Contact */
+main#Contact {
+  background-color: #dddddd;
+  color: #333333;
+  padding: 40px;
+}
+
+main#Contact .section-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+main#Contact form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+main#Contact .form-group {
+  margin-bottom: 20px;
+}
+
+main#Contact label {
+  font-size: 18px;
+  display: block;
+}
+
+main#Contact input,
+main#Contact textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #999999;
+}
+
+main#Contact textarea {
+  resize: vertical;
+}
+
+main#Contact .submit-button {
+  display: block;
+  width: 150 px;
+  height: 40px  ;
+  padding: 10px 0;
+  background-color: #666564;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+main#Contact .submit-button:hover {
+  background-color: #666564;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Tampilan Contact */
+footer {
+  background-color: #333333;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-social-media {
+  margin-top: 10px;
+}
+
+.footer-social-media p {
+  margin-bottom: 5px;
+}
+
+.footer-social-media img {
+  width: 80px;
+  height: 80px;
+}
